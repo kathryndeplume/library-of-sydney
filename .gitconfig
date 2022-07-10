@@ -1,5 +1,4 @@
 [filter "jupyternotebook"]
-	; clean = jupyter nbconvert --to=notebook --ClearOutputPreprocessor.enabled=True --inplace %f
-	clean = jupyter nbconvert --to=notebook --ClearOutputPreprocessor.enabled=True --stdout %f
+	clean = jupyter nbconvert --to=notebook --execute --ClearOutputPreprocessor.enabled=True --stdout %f
 	smudge = cat
 	required
